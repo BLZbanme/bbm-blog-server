@@ -11,4 +11,4 @@ const TagsSchema = new Schema({
     }
 })
 
-module.exports = Tags = connTags.model("articles", TagsSchema);
+module.exports = Tags = connTags.model("tags", TagsSchema);
