@@ -10,6 +10,7 @@ app.use(bodyParser());
 // const connect = require('./tools/connect.js');
 
 // connect("articles");
+require("./tools/connect");
 
 app.use(router.routes()).use(router.allowedMethods());
 

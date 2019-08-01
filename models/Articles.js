@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-const {connArticles} = require('../tools/connect.js');
 const Schema = mongoose.Schema;
 
 const ArticlesSchema = new Schema({
@@ -33,4 +32,4 @@ const ArticlesSchema = new Schema({
     }
 })
 
-module.exports = Articles = connArticles.model("articles", ArticlesSchema);
+module.exports = Articles = mongoose.model("articles", ArticlesSchema);

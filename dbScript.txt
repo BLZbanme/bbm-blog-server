@@ -1,0 +1,10 @@
+use blog;
+
+db.createCollection('articles');
+db.createCollection('tags');
+db.createCollection('users');
+
+db.users.insert({
+    name: '',
+    password: ''
+})

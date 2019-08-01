@@ -76,6 +76,7 @@ router.post("/login", async ctx => {
         ctx.body = {name: '用户不存在'};
     }
     else {
+        console.log(tools.enbcrypt(password));
         let result = await bcrypt.compareSync(password, user.password);
         if (result) {
             const payLoad = {id: user.id, name: user.name};

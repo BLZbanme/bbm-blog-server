@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-const {connTags} = require('../tools/connect.js');
 const Schema = mongoose.Schema;
 
 const TagsSchema = new Schema({
@@ -11,4 +10,4 @@ const TagsSchema = new Schema({
     }
 })
 
-module.exports = Tags = connTags.model("tags", TagsSchema);
+module.exports = Tags = mongoose.model("tags", TagsSchema);
