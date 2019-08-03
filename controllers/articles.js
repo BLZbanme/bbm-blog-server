@@ -3,16 +3,17 @@ const Articles = require('../models/Articles');
 class ArticlesControllers {
 
     async getAllArticles(ctx) {
-        return await Articles.find();
+        ctx.body = await Articles.find();
     }
 
     async getOneArticle(ctx) {
         const id = ctx.params.id;
-        return await Articles.findOne({_id: id});
+        ctx.body =  await Articles.findOne({_id: id});
     }
     
     async addArticle(ctx) {
         let body = ctx.request.body;
+        console.log(body);
         const newArticle = new Articles();
         newArticle.title = body.title;
         newArticle.content = body.content;
@@ -21,6 +22,7 @@ class ArticlesControllers {
             .then(() => {
                 ctx.status = 200;
             }).catch(err => {
+                console.log(err);
                 ctx.status = 500;
             });
     }

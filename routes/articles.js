@@ -8,7 +8,7 @@ const router = new Router({
     prefix: `/${baseApi}/${theApi}`
 })
 
-router.get("/", ArticlesControllers.getAllArticles)
+router.get("/", ArticlesControllers.getAllArticles);
 
 router.get("/:id", ArticlesControllers.getOneArticle);
 
