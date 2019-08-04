@@ -4,7 +4,7 @@ module.exports = {
         host: '127.0.0.1',
         name: 'blog',
         user: 'root',
-        password: '0000',
+        password: '1234'
     },
     baseApi: 'api'
 }
