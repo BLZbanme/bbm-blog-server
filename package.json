@@ -20,6 +20,6 @@
     "koa-router": "^7.4.0",
     "mongoose": "^5.6.4",
     "passport-jwt": "^4.0.0",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   }
 }
